@@ -7,7 +7,13 @@
  */
 package mvcapi
 {
-	public interface IModelTreeMember
+	/**
+	IModelTreeMember should provide ability to handle upcoming messages for third party classes.
+	 Still - that messages, that is sent down, should be handled by model tree member itself and resent down.
+	 */
+	public interface IModelTreeMember extends IMessageTreeMember
 	{
+		function addMessageHandler(messageName:String, handler:Function):void;
+		function removeMessageHandler(messageName:String, handler:Function):void;
 	}
 }

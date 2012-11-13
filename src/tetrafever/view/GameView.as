@@ -1,9 +1,8 @@
 /**
- * Created with IntelliJ IDEA.
- * User: Samsung
- * Date: 21.10.12
- * Time: 12:17
- * To change this template use File | Settings | File Templates.
+ * @author alexeyst
+ * @e-mail doctorstal@gmail.com
+ * @date 21.10.12
+ * @time 12:17
  */
 package tetrafever.view
 {
@@ -14,9 +13,9 @@ package tetrafever.view
 
 	public class GameView extends ViewTreeMember
 	{
-		public function GameView(_host:DisplayObjectContainer, model:ModelTreeMember)
+		public function GameView(host:DisplayObjectContainer, model:ModelTreeMember)
 		{
-			super();
+			super(host, model);
 		}
 	}
 }

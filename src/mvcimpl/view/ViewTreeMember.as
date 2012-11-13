@@ -4,11 +4,16 @@
  */
 package mvcimpl.view
 {
-	import mvcimpl.MessageTreeMember;
+import flash.display.DisplayObjectContainer;
 
-	public class ViewTreeMember extends MessageTreeMember
+import mvcimpl.MessageTreeMember;
+import mvcimpl.model.ModelTreeMember;
+
+public class ViewTreeMember extends MessageTreeMember
 	{
-		public function ViewTreeMember()
+
+        private var _host:DisplayObjectContainer;
+		public function ViewTreeMember(_host:DisplayObjectContainer,_model:ModelTreeMember)
 		{
 		}
 	}

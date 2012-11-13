@@ -4,7 +4,7 @@
  */
 package mvcapi
 {
-	public interface IMessage
+	public interface IMessage extends IDisposable
 	{
 		function get sender():IMessageTreeMember;
 		function get receiver():IMessageTreeMember;

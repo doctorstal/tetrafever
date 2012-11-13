@@ -4,7 +4,7 @@
  */
 package mvcapi
 {
-	public interface ITreeMember
+	public interface ITreeMember extends IDisposable
 	{
 		function addChild(child:ITreeMember):ITreeMember;
 		function removeChild(child:ITreeMember):ITreeMember;
@@ -12,6 +12,5 @@ package mvcapi
 		function get parent():ITreeMember;
 		function get children():Vector.<ITreeMember>;
 
-		function dispose():void;
 	}
 }

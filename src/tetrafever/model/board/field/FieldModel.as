@@ -6,7 +6,9 @@
  */
 package tetrafever.model.board.field
 {
-	public class FieldModel
+	import mvcimpl.model.ModelTreeMember;
+
+	public class FieldModel extends ModelTreeMember
 	{
 		public function FieldModel()
 		{

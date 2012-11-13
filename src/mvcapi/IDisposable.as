@@ -8,5 +8,6 @@ package mvcapi
 {
 	public interface IDisposable
 	{
+		function dispose():void;
 	}
 }

@@ -6,24 +6,31 @@ package tetrafever.controller
 {
 	import flash.display.DisplayObjectContainer;
 
-	import tetrafever.model.GameModel;
+	import mvcimpl.controller.MainController;
+	import mvcimpl.model.ModelTreeMember;
+	import mvcimpl.view.ViewTreeMember;
 
-	public class GameController
+	import tetrafever.model.GameModel;
+	import tetrafever.view.GameView;
+
+	public class GameController extends MainController
 	{
-		private var _host:DisplayObjectContainer;
-		private var _model:GameModel;
-		private var _view:GameView;
+
 		public function GameController(host:DisplayObjectContainer)
 		{
-			_host = host;
-			_model = new GameModel();
-			_view = new GameView(_host, _model);
+			super(host);
+
 		}
 
-		public function initLogic():void
+
+		override protected function createView(model:ModelTreeMember):ViewTreeMember
 		{
-			_model.createChildren();
+			return new GameView(_host, model);
 		}
 
+		override protected function createModel():ModelTreeMember
+		{
+			return new GameModel();
+		}
 	}
 }

@@ -8,6 +8,10 @@ package tetrafever.model.player
 
 	public class PlayerModel extends ModelTreeMember
 	{
+		public var score:Number;
+		public var name:String;
+		public var level:int;
+
 		public function PlayerModel()
 		{
 		}

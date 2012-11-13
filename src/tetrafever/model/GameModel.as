@@ -4,21 +4,22 @@
  */
 package tetrafever.model
 {
-	import mvcimpl.MessageTreeMember;
+	import mvcimpl.model.ModelTreeMember;
 
 	import tetrafever.model.board.BoardModel;
 	import tetrafever.model.player.PlayerModel;
 
-	public class GameModel extends MessageTreeMember
+	public class GameModel extends ModelTreeMember
 	{
 		private var _board:BoardModel;
 		private var _player:PlayerModel;
 
 		public function GameModel()
 		{
+			createChildren();
 		}
 
-		public function createChildren():void
+		private function createChildren():void
 		{
 			_board = new BoardModel();
 			addChild(_board);

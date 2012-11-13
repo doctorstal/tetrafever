@@ -4,12 +4,17 @@
  */
 package mvcimpl.controller
 {
-	import mvcimpl.model.ModelTreeMember;
+import flash.display.DisplayObjectContainer;
 
-	public class ControllerTreeMember extends ModelTreeMember
+import mvcimpl.model.ModelTreeMember;
+
+public class ControllerTreeMember extends ModelTreeMember
 	{
-		public function ControllerTreeMember()
+        protected var _host:DisplayObjectContainer;
+
+        public function ControllerTreeMember(host:DisplayObjectContainer)
 		{
+            _host = host;
 		}
 	}
 }
